@@ -1,9 +1,9 @@
 name: icon_bottomsheet
 description: A customized bottomsheet with dynamic icon(widget) on top.
 version: 0.0.1
-homepage:
-repository:
-documentation:
+homepage: https://github.com/amitmishra7/icon_bottomsheet
+repository: https://github.com/amitmishra7/icon_bottomsheet
+documentation: https://github.com/amitmishra7/icon_bottomsheet/blob/main/README.md
 
 environment:
   sdk: ">=2.17.6 <3.0.0"

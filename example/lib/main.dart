@@ -1,7 +1,6 @@
 import 'package:example/payment_failed.dart';
-import 'package:example/payment_success.dart';
-import 'package:icon_bottomsheet/icon_bottom_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:icon_bottomsheet/icon_bottomsheet.dart';
 
 void main() {
   runApp(const MyApp());
