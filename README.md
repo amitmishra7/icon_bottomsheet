@@ -3,9 +3,9 @@
 This is a customized class for bottomsheet with dynamic icon(widget) on top with various shapes. It uses the default bottomsheet imported from `package:flutter/material.dart`. The IconBottomSheet class then creates a tranaparent border for the iconWidget. The size of the padding is defined by iconPadding. The iconSize is the size of the iconWidget and iconShape is the shape of the iconWidget. There are various shapes for iconWidget as `circle`, `square`, `circleTop`, `circleBottom`. Below are the images for the various iconShapes of IconBottomSheet.
 
 
-<img src="./assets/bf_c.png" height="400"/>   <img src="./assets/bs_ct.png" height="400"/>  
+<img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bf_c.png?raw=true" height="400"/>   <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bs_ct.png?raw=true" height="400"/>  
 
-<img src="./assets/bf_cb.png" height="400"/>   <img src="./assets/bs_s.png" height="400"/>
+<img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bf_cb.png?raw=true" height="400"/>   <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bs_s.png?raw=true" height="400"/>
 
 
 # Arguments
