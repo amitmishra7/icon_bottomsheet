@@ -1,5 +1,5 @@
 name: icon_bottomsheet
-description: A customized bottomsheet with dynamic icon(widget) on top.
+description: A customized bottomsheet with dynamic icon(widget) on top. It gives a transparent background to the iconWidget which is displayed above the bottomsheet. The iconWidget is a dynamic widget and can be customized by the user. It can also be positioned as left, center or right. The background colors of the iconWidget as well as the child can be customized. The idea behind the icon_bottomsheet is to give user a bottomsheet with a customizable widget with a transparent border above it.
 version: 0.0.3
 homepage: https://github.com/amitmishra7/icon_bottomsheet
 repository: https://github.com/amitmishra7/icon_bottomsheet

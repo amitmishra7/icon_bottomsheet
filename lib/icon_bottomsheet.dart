@@ -55,13 +55,17 @@ class IconBottomSheet extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: iconSize / 2),
             child: ClipRRect(
-              borderRadius: const BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
+              borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(15), topRight: Radius.circular(15)),
               child: ColorFiltered(
-                colorFilter: ColorFilter.mode(childBackgroundColor, BlendMode.srcOut),
+                colorFilter:
+                    ColorFilter.mode(childBackgroundColor, BlendMode.srcOut),
                 child: Stack(
                   children: [
                     Container(
-                      decoration: const BoxDecoration(color: Colors.white, backgroundBlendMode: BlendMode.dstOut),
+                      decoration: const BoxDecoration(
+                          color: Colors.white,
+                          backgroundBlendMode: BlendMode.dstOut),
                     ),
                     Positioned(
                       top: -iconSize / 2,
@@ -107,9 +111,12 @@ class IconBottomSheet extends StatelessWidget {
       case IconShape.square:
         return null;
       case IconShape.circleTop:
-        return const BorderRadius.only(topRight: Radius.circular(500), topLeft: Radius.circular(500));
+        return const BorderRadius.only(
+            topRight: Radius.circular(500), topLeft: Radius.circular(500));
       case IconShape.circleBottom:
-        return const BorderRadius.only(bottomRight: Radius.circular(500), bottomLeft: Radius.circular(500));
+        return const BorderRadius.only(
+            bottomRight: Radius.circular(500),
+            bottomLeft: Radius.circular(500));
       default:
         return BorderRadius.circular(500);
     }

@@ -23,7 +23,10 @@ class _SuccessState extends State<Success> {
             const Center(
               child: Text(
                 'Failure',
-                style: TextStyle(color: Colors.redAccent, fontSize: 40, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    color: Colors.redAccent,
+                    fontSize: 40,
+                    fontWeight: FontWeight.w600),
               ),
             ),
             const SizedBox(
@@ -31,7 +34,10 @@ class _SuccessState extends State<Success> {
             ),
             const Text(
               'Your application has been rejected. Please fill the form properly and upload again.',
-              style: TextStyle(color: Colors.black87, fontSize: 22, fontWeight: FontWeight.w400),
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w400),
             ),
             const SizedBox(
               height: 25,

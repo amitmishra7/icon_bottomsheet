@@ -23,7 +23,10 @@ class _PaymentFailedState extends State<PaymentFailed> {
             const Center(
               child: Text(
                 'Payment Failed.!',
-                style: TextStyle(color: Colors.redAccent, fontSize: 30, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    color: Colors.redAccent,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w600),
               ),
             ),
             const SizedBox(
@@ -38,7 +41,10 @@ class _PaymentFailedState extends State<PaymentFailed> {
             ),
             const Text(
               'Dont worry your money is safe! If money was debited from your account, it will be refunded automatically in 5-7 working days.',
-              style: TextStyle(color: Colors.black54, fontSize: 16, fontWeight: FontWeight.w400),
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400),
             ),
             const SizedBox(
               height: 10,
@@ -55,11 +61,17 @@ class _PaymentFailedState extends State<PaymentFailed> {
               children: const [
                 Text(
                   'Payment ID',
-                  style: TextStyle(color: Colors.black87, fontSize: 16, fontWeight: FontWeight.w600),
+                  style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600),
                 ),
                 Text(
                   'PP782365479193984749',
-                  style: TextStyle(color: Colors.black54, fontSize: 16, fontWeight: FontWeight.w400),
+                  style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
                 ),
               ],
             ),
@@ -71,11 +83,17 @@ class _PaymentFailedState extends State<PaymentFailed> {
               children: const [
                 Text(
                   'Time',
-                  style: TextStyle(color: Colors.black87, fontSize: 16, fontWeight: FontWeight.w600),
+                  style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600),
                 ),
                 Text(
                   '14th June 2022 at 8:45pm',
-                  style: TextStyle(color: Colors.black54, fontSize: 16, fontWeight: FontWeight.w400),
+                  style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
                 ),
               ],
             ),
@@ -91,18 +109,27 @@ class _PaymentFailedState extends State<PaymentFailed> {
             ),
             const Text(
               'Why did it fail?',
-              style: TextStyle(color: Colors.black87, fontSize: 16, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600),
             ),
             const SizedBox(
               height: 5,
             ),
             const Text(
               '1. The CVV or Expiry Date might be wrong.',
-              style: TextStyle(color: Colors.black54, fontSize: 16, fontWeight: FontWeight.w400),
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400),
             ),
             const Text(
               '2. Possibly your bank server might be down',
-              style: TextStyle(color: Colors.black54, fontSize: 16, fontWeight: FontWeight.w400),
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400),
             ),
             const SizedBox(
               height: 20,

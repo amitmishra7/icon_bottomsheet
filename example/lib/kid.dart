@@ -23,7 +23,10 @@ class _KidState extends State<Kid> {
             const Center(
               child: Text(
                 'Hello Steve.!',
-                style: TextStyle(color: Colors.pinkAccent, fontSize: 40, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    color: Colors.pinkAccent,
+                    fontSize: 40,
+                    fontWeight: FontWeight.w600),
               ),
             ),
             const SizedBox(
@@ -31,7 +34,10 @@ class _KidState extends State<Kid> {
             ),
             const Text(
               'Your request has been submitted. We will get back to you shortly. Meantime you can explore our products',
-              style: TextStyle(color: Colors.black87, fontSize: 22, fontWeight: FontWeight.w400),
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w400),
             ),
             const SizedBox(
               height: 25,
