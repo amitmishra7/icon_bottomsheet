@@ -20,6 +20,14 @@ This is a customized class for bottomsheet with dynamic icon(widget) on top with
 | iconBackgroundColor           | Defines the background color of your iconWidget. Defaults to white. In order to show no color use Colors.transparent.
 | childBackgroundColor           | Defines the background color of your child widget. Defaults to white. 
 
+# Position
+
+| Argument               | Description                                                                                       
+|------------------------|---------------------------------------------------------------------------------------------------
+| Position.center       | Aligns the iconWidget to center of the bottomsheet. It is set by default if no position is passed as a param.                                
+| Position.left    | Aligns the iconWidget to left of the bottomsheet. 
+| Position.right | Aligns the iconWidget to right of the bottomsheet. 
+
 # IconShape
 
 | Argument               | Description                                                                                       
