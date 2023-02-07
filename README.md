@@ -3,9 +3,9 @@
 This is a customized class for bottomsheet with dynamic icon(widget) on top with various shapes. It uses the default bottomsheet imported from `package:flutter/material.dart`. The IconBottomSheet class then creates a tranaparent border for the iconWidget. The size of the padding is defined by iconPadding. The iconSize is the size of the iconWidget and iconShape is the shape of the iconWidget. There are various shapes for iconWidget as `circle`, `square`, `circleTop`, `circleBottom`. Below are the images for the various iconShapes of IconBottomSheet.
 
 
-<img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bf_c.png?raw=true" height="400"/>   <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bs_ct.png?raw=true" height="400"/>  
+<img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bf_c.png?raw=true" height="300"/> <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bs_s.png?raw=true" height="300"/>  <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bf_cb.png?raw=true" height="300"/>   <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bs_ct.png?raw=true" height="300"/>
 
-<img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bf_cb.png?raw=true" height="400"/>   <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bs_s.png?raw=true" height="400"/>
+<img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/b_pc.png?raw=true" height="300"/> <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bt_pc.png?raw=true" height="300"/>  <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/b_pl.png?raw=true" height="300"/>   <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/b_pc.png?raw=true" height="300"/>
 
 
 # Arguments
@@ -16,6 +16,9 @@ This is a customized class for bottomsheet with dynamic icon(widget) on top with
 | iconWidget         | Widget displayed on top of bottomsheet.                                                
 | iconSize           | Height/Width of the iconWidget. Defaults to 50 (height and width are same).
 | iconPadding        | Transparent border padding around the iconWidget. Defaults to 16. Use 0 when not requried.
+| position           | Helps to position your iconWidget on left, right or center. Defaults to center.
+| iconBackgroundColor           | Defines the background color of your iconWidget. Defaults to white. In order to show no color use Colors.transparent.
+| childBackgroundColor           | Defines the background color of your child widget. Defaults to white. 
 
 # IconShape
 
@@ -34,7 +37,19 @@ Add the package `icon_bottomsheet` to your pubspec.yaml file and do pub get.
 
 # Usage
 
-Import showModalBottomSheet from `material.dart` and then import the `IconBottomSheet` from `package:icon_bottomsheet/icon_bottomsheet.dart` and pass the arguments as described above.
+Firstly you need to change the canvas color in the theme of your material app so that you bottomsheet has transparent background. 
+
+```dart
+MaterialApp(
+    title: 'Flutter Demo',
+    theme: ThemeData(
+    canvasColor: Colors.transparent,
+    ),
+    home: const MyHomePage(title: 'Icon BottomSheet'),
+);
+```
+
+After that import showModalBottomSheet from `material.dart` and then import the `IconBottomSheet` from `package:icon_bottomsheet/icon_bottomsheet.dart` and pass the arguments as described above.
 
 ```dart
 showModalBottomSheet<int>(
@@ -43,10 +58,13 @@ showModalBottomSheet<int>(
     return const IconBottomSheet(
         iconWidget: Icon(
         Icons.cancel_outlined,
-        color: Colors.redAccent,
+        color: Colors.white,
         size: 100,
         ),
-        iconShape: IconShape.topCircular,
+        iconShape: IconShape.square,
+        position: Position.right,
+        iconBackgroundColor: Colors.redAccent,
+        //childBackgroundColor: Colors.grey,
         iconSize: 120,
         iconPadding: 20,
         child: PaymentFailed(),

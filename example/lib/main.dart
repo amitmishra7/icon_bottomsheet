@@ -1,4 +1,7 @@
+import 'package:example/kid.dart';
 import 'package:example/payment_failed.dart';
+import 'package:example/payment_success.dart';
+import 'package:example/success.dart';
 import 'package:flutter/material.dart';
 import 'package:icon_bottomsheet/icon_bottomsheet.dart';
 
@@ -43,10 +46,31 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Colors.redAccent,
             size: 100,
           ),
-          iconShape: IconShape.circleBottom,
+          position: Position.right,
+          iconShape: IconShape.circle,
           iconSize: 120,
           iconPadding: 20,
-          child: PaymentFailed(),
+          child: Success(),
+        );
+      },
+    );
+  }
+
+  void _showKidsBottomSheet() {
+    showModalBottomSheet<int>(
+      context: context,
+      builder: (context) {
+        return IconBottomSheet(
+          iconWidget: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Image.asset('assets/duckling.png'),
+          ),
+          //iconBackgroundColor: Colors.transparent,
+          //childBackgroundColor: Colors.blue,
+          iconShape: IconShape.circle,
+          iconSize: 120,
+          iconPadding: 20,
+          child: const Kid(),
         );
       },
     );

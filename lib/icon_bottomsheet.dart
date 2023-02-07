@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 enum IconShape { circle, square, circleTop, circleBottom }
 
+enum Position { center, left, right }
+
 class IconBottomSheet extends StatelessWidget {
   const IconBottomSheet({
     Key? key,
@@ -12,6 +14,9 @@ class IconBottomSheet extends StatelessWidget {
     this.iconSize = 50,
     this.iconPadding = 16,
     this.iconShape = IconShape.circle,
+    this.iconBackgroundColor = Colors.white,
+    this.childBackgroundColor = Colors.white,
+    this.position = Position.center,
   }) : super(key: key);
 
   /// [optional] iconSize resembles the height (same as width) of the icon widget that will be displayed.
@@ -33,6 +38,15 @@ class IconBottomSheet extends StatelessWidget {
   /// [optional] iconShape defines the shape of the iconWidget. Defaults to circular
   final IconShape iconShape;
 
+  /// [optional] iconBackground color is the color of the iconWidget background. Defaults to white.
+  final Color iconBackgroundColor;
+
+  /// [optional] childBackgroundColor color is the color of the child background. Defaults to white.
+  final Color childBackgroundColor;
+
+  /// [optional] to position the iconWidget. Defaults to center.
+  final Position position;
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -43,7 +57,7 @@ class IconBottomSheet extends StatelessWidget {
             child: ClipRRect(
               borderRadius: const BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
               child: ColorFiltered(
-                colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcOut),
+                colorFilter: ColorFilter.mode(childBackgroundColor, BlendMode.srcOut),
                 child: Stack(
                   children: [
                     Container(
@@ -51,7 +65,8 @@ class IconBottomSheet extends StatelessWidget {
                     ),
                     Positioned(
                       top: -iconSize / 2,
-                      left: (MediaQuery.of(context).size.width - iconSize - iconPadding) / 2,
+                      left: iconWidgetOuterPosition(context),
+                      //(MediaQuery.of(context).size.width - iconSize - iconPadding) / 2,
                       child: Container(
                         height: iconSize + iconPadding,
                         width: iconSize + iconPadding,
@@ -68,12 +83,12 @@ class IconBottomSheet extends StatelessWidget {
           ),
           Positioned(
             top: iconPadding / 2,
-            left: (MediaQuery.of(context).size.width - iconSize) / 2,
+            left: iconWidgetInnerPosition(context),
             child: Container(
               height: iconSize,
               width: iconSize,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: iconBackgroundColor, //Colors.white,
                 borderRadius: borderRadius,
               ),
               child: iconWidget,
@@ -97,6 +112,28 @@ class IconBottomSheet extends StatelessWidget {
         return const BorderRadius.only(bottomRight: Radius.circular(500), bottomLeft: Radius.circular(500));
       default:
         return BorderRadius.circular(500);
+    }
+  }
+
+  double iconWidgetOuterPosition(context) {
+    switch (position) {
+      case Position.left:
+        return 0;
+      case Position.right:
+        return (MediaQuery.of(context).size.width - iconSize - iconPadding);
+      case Position.center:
+        return (MediaQuery.of(context).size.width - iconSize - iconPadding) / 2;
+    }
+  }
+
+  double iconWidgetInnerPosition(context) {
+    switch (position) {
+      case Position.left:
+        return iconPadding / 2;
+      case Position.right:
+        return (MediaQuery.of(context).size.width - iconSize - iconPadding / 2);
+      case Position.center:
+        return (MediaQuery.of(context).size.width - iconSize) / 2;
     }
   }
 }
