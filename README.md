@@ -5,7 +5,7 @@ This is a customized class for bottomsheet with dynamic icon(widget) on top with
 
 <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bf_c.png?raw=true" height="300"/> <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bs_s.png?raw=true" height="300"/>  <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bf_cb.png?raw=true" height="300"/>   <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bs_ct.png?raw=true" height="300"/>
 
-<img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/b_pc.png?raw=true" height="300"/> <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bt_pc.png?raw=true" height="300"/>  <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/b_pl.png?raw=true" height="300"/>   <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/b_pc.png?raw=true" height="300"/>
+<img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/b_pc.png?raw=true" height="300"/> <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/bt_pc.png?raw=true" height="300"/>  <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/b_pl.png?raw=true" height="300"/>   <img src="https://github.com/amitmishra7/icon_bottomsheet/blob/main/assets/b_pr.png?raw=true" height="300"/>
 
 
 # Arguments
